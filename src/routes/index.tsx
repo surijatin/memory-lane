@@ -1,12 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { useAuth } from '../contexts/AuthContext'
-import { MainLayout } from '../components/layout/MainLayout'
-import { HomePage } from '../components/pages/HomePage'
-import { MemoriesPage } from '../components/pages/MemoriesPage'
-import { CreateMemoryLanePage } from '../components/pages/CreateMemoryLanePage'
-import { MemoryLaneDetailPage } from '../components/pages/MemoryLaneDetailPage'
-import { SettingsPage } from '../components/pages/SettingsPage'
-import { SharedMemoryLaneViewPage } from '../components/pages/SharedMemoryLaneViewPage'
+import { useAuth } from '@/contexts/AuthContext'
+import { MainLayout } from '@/components/layout/MainLayout'
+import { HomePage } from '@/components/pages/HomePage'
+import { MemoriesPage } from '@/components/pages/MemoriesPage'
+import { CreateMemoryLanePage } from '@/components/pages/CreateMemoryLanePage'
+import { MemoryLaneDetailPage } from '@/components/pages/MemoryLaneDetailPage'
+import { SettingsPage } from '@/components/pages/SettingsPage'
+import { SharedMemoryLaneViewPage } from '@/components/pages/SharedMemoryLaneViewPage'
 
 export function AppRoutes() {
   const { currentUser } = useAuth()

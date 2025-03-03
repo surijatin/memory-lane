@@ -1,4 +1,4 @@
-import { cn } from '../lib/utils'
+import { cn } from '@/lib/utils'
 
 // Common container styles
 export const containerStyles = 'min-h-screen bg-gray-50 dark:bg-gray-900'

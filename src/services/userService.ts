@@ -1,5 +1,5 @@
-import { supabase } from '../lib/supabase'
-import { User } from '../types'
+import { supabase } from '@/lib/supabase'
+import { User } from '@/types'
 
 export const userService = {
   /**

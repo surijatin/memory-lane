@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react'
-import { User } from '../types'
-import { userService } from '../services/userService'
+import { User } from '@/types'
+import { userService } from '@/services/userService'
 
 type AuthContextType = {
   currentUser: User | null

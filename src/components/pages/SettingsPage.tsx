@@ -1,4 +1,4 @@
-import { useTheme } from '../../components/common/theme/ThemeProvider'
+import { useTheme } from '@/components/common/theme/ThemeProvider'
 import {
   MoonIcon,
   SunIcon,

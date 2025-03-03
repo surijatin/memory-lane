@@ -1,9 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom'
-import { Avatar, AvatarFallback, AvatarImage } from '../ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { CubeIcon } from '@heroicons/react/20/solid'
 import { CogIcon, PhotoIcon } from '@heroicons/react/24/outline'
-import { cn } from '../../lib/utils'
-import { useAuth } from '../../contexts/AuthContext'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/contexts/AuthContext'
 
 export function LeftMenubar() {
   const { currentUser, logout } = useAuth()

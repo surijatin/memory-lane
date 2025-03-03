@@ -1,4 +1,4 @@
-import { User } from '../../types'
+import { User } from '@/types'
 import { CreateMemoryLane } from '@/components/features/memory-lane/CreateMemoryLane'
 
 interface CreateMemoryLanePageProps {

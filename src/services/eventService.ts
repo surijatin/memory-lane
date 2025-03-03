@@ -1,7 +1,7 @@
-import { supabase } from '../lib/supabase'
-import { Event, Image } from '../types'
+import { supabase } from '@/lib/supabase'
+import { Event, Image } from '@/types'
 import { v4 as uuidv4 } from 'uuid'
-import { memoryLaneService } from './memoryLaneService'
+import { memoryLaneService } from '@/services/memoryLaneService'
 
 export const eventService = {
   /**

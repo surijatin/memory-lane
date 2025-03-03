@@ -1,5 +1,5 @@
-import { User } from '../types'
-import { UserFormDialog } from './UserFormDialog'
+import { User } from '@/types'
+import { UserFormDialog } from '@/components/features/user/UserFormDialog'
 
 interface EditUserDialogProps {
   user: User | null

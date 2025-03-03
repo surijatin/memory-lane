@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { MemoryLane, Event, Image, User } from '../types'
-import { memoryLaneService } from '../services/memoryLaneService'
-import { eventService } from '../services/eventService'
-import { userService } from '../services/userService'
-import { Card, CardContent } from './ui/card'
-import { Button } from './ui/button'
-import { Avatar, AvatarImage, AvatarFallback } from './ui/avatar'
-import { ImageGallery } from './ImageGallery'
+import { MemoryLane, Event, Image, User } from '@/types'
+import { memoryLaneService } from '@/services/memoryLaneService'
+import { eventService } from '@/services/eventService'
+import { userService } from '@/services/userService'
+import { Card, CardContent } from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { ImageGallery } from '@/components/features/image/ImageGallery'
 import {
   ChevronLeftIcon,
   PhotoIcon,

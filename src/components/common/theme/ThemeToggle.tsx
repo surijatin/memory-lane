@@ -1,6 +1,6 @@
 import { SunIcon, MoonIcon } from '@heroicons/react/24/outline'
-import { Button } from './ui/button'
-import { useTheme } from './ThemeProvider'
+import { Button } from '@/components/ui/button'
+import { useTheme } from '@/components/common/theme/ThemeProvider'
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()

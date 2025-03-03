@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useNavigate, Outlet } from 'react-router-dom'
-import { LeftMenubar } from './LeftMenubar'
-import { useAuth } from '../../contexts/AuthContext'
+import { LeftMenubar } from '@/components/layout/LeftMenubar'
+import { useAuth } from '@/contexts/AuthContext'
 
 export function MainLayout() {
   const { currentUser, loading, error } = useAuth()

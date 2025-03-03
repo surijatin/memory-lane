@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
-import { User } from '../../types'
+import { User } from '@/types'
 import { MemoriesTab } from '@/components/features/memories/MemoriesTab'
-import { AsyncContent } from '../common/AsyncContent'
-import { memoryLaneService } from '../../services/memoryLaneService'
-import { pageLayoutStyles } from '../../utils/styleUtils'
+import { AsyncContent } from '@/components/common/AsyncContent'
+import { memoryLaneService } from '@/services/memoryLaneService'
+import { pageLayoutStyles } from '@/utils/styleUtils'
 
 interface MemoriesPageProps {
   user: User

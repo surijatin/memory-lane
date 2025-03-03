@@ -1,6 +1,6 @@
 import React from 'react'
-import { ErrorDisplay } from './ErrorDisplay'
-import { spinnerStyles } from '../../utils/styleUtils'
+import { ErrorDisplay } from '@/components/common/ErrorDisplay'
+import { spinnerStyles } from '@/utils/styleUtils'
 
 interface AsyncContentProps {
   loading: boolean

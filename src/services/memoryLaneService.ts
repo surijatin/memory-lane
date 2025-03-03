@@ -1,5 +1,5 @@
-import { supabase } from '../lib/supabase'
-import { MemoryLane, Event } from '../types'
+import { supabase } from '@/lib/supabase'
+import { MemoryLane, Event } from '@/types'
 import { v4 as uuidv4 } from 'uuid'
 
 export const memoryLaneService = {

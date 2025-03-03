@@ -1,5 +1,5 @@
-import { supabase } from '../lib/supabase'
-import { Memory, Image } from '../types'
+import { supabase } from '@/lib/supabase'
+import { Memory, Image } from '@/types'
 
 export const memoryService = {
   /**

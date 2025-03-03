@@ -1,7 +1,7 @@
 import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
-import { Button } from '../ui/button'
-import { errorStyles } from '../../utils/styleUtils'
-import { cn } from '../../lib/utils'
+import { Button } from '@/components/ui/button'
+import { errorStyles } from '@/utils/styleUtils'
+import { cn } from '@/lib/utils'
 
 interface ErrorDisplayProps {
   title?: string
