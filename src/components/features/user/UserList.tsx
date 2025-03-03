@@ -58,11 +58,6 @@ const UserList = forwardRef<UserListRefHandle, UserListProps>(
       fetchUsers()
     }, [])
 
-    const handleViewDetails = (userId: string) => {
-      console.log(`View details for user: ${userId}`)
-      // You can implement user details view here
-    }
-
     const handleEditUser = (user: User) => {
       setEditingUser(user)
       setEditDialogOpen(true)
@@ -207,7 +202,6 @@ const UserList = forwardRef<UserListRefHandle, UserListProps>(
             <UserCard
               key={user.id}
               user={user}
-              onViewDetails={handleViewDetails}
               onEditUser={handleEditUser}
               onUserUpdated={fetchUsers}
             />

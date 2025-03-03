@@ -39,22 +39,20 @@ import {
 
 interface UserCardProps {
   user: User
-  onViewDetails?: (userId: string) => void
-  onEditUser?: (user: User) => void
-  onUserUpdated?: () => void
+  onEditUser: (user: User) => void
+  onUserUpdated: () => void
 }
 
-export function UserCard({
-  user,
-  onViewDetails,
-  onEditUser,
-  onUserUpdated,
-}: UserCardProps) {
+export function UserCard({ user, onEditUser, onUserUpdated }: UserCardProps) {
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
   const [isDeleting, setIsDeleting] = useState(false)
 
   const navigate = useNavigate()
   const { login } = useAuth()
+
+  // Check if the user is protected (cannot be deleted)
+  const isProtectedUser =
+    user.username === 'taylorswift' || user.username === 'elonmusk'
 
   // Get initials for avatar
   const getInitials = () => {
@@ -127,22 +125,48 @@ export function UserCard({
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align='end'>
-              <DropdownMenuItem onClick={() => onEditUser && onEditUser(user)}>
-                <div className='flex items-center text-gray-700 dark:text-gray-300'>
-                  <PencilIcon className='h-4 w-4 mr-2' />
-                  Edit
-                </div>
-              </DropdownMenuItem>
+              {isProtectedUser ? (
+                <DropdownMenuItem
+                  className='text-gray-700 dark:text-gray-300 opacity-50 cursor-not-allowed'
+                  disabled={true}
+                >
+                  <div className='flex items-center text-gray-700 dark:text-gray-300'>
+                    <PencilIcon className='h-4 w-4 mr-2' />
+                    Edit
+                  </div>
+                </DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem
+                  onClick={() => onEditUser && onEditUser(user)}
+                >
+                  <div className='flex items-center text-gray-700 dark:text-gray-300'>
+                    <PencilIcon className='h-4 w-4 mr-2' />
+                    Edit
+                  </div>
+                </DropdownMenuItem>
+              )}
               <DropdownMenuSeparator />
-              <DropdownMenuItem
-                className='text-red-600 dark:text-red-400'
-                onClick={() => setDeleteDialogOpen(true)}
-              >
-                <div className='flex items-center text-red-600 dark:text-red-400'>
-                  <TrashIcon className='h-4 w-4 mr-2' />
-                  Delete
-                </div>
-              </DropdownMenuItem>
+              {isProtectedUser ? (
+                <DropdownMenuItem
+                  className='text-red-600 dark:text-red-400 opacity-50 cursor-not-allowed'
+                  disabled={true}
+                >
+                  <div className='flex items-center text-red-600 dark:text-red-400'>
+                    <TrashIcon className='h-4 w-4 mr-2' />
+                    Delete
+                  </div>
+                </DropdownMenuItem>
+              ) : (
+                <DropdownMenuItem
+                  className='text-red-600 dark:text-red-400'
+                  onClick={() => setDeleteDialogOpen(true)}
+                >
+                  <div className='flex items-center text-red-600 dark:text-red-400'>
+                    <TrashIcon className='h-4 w-4 mr-2' />
+                    Delete
+                  </div>
+                </DropdownMenuItem>
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -185,16 +209,14 @@ export function UserCard({
         <span className='text-xs text-gray-500 dark:text-gray-400'>
           Joined {getTimeSince()}
         </span>
-        {onViewDetails && (
-          <Button
-            variant='ghost'
-            size='sm'
-            className='text-primary hover:text-primary/80 dark:text-blue-400 dark:hover:text-blue-300 dark:hover:bg-blue-950/30'
-            onClick={handleLogin}
-          >
-            Login
-          </Button>
-        )}
+        <Button
+          variant='ghost'
+          size='sm'
+          className='text-primary hover:text-primary/80 dark:text-blue-400 dark:hover:text-blue-300 dark:hover:bg-blue-950/30'
+          onClick={handleLogin}
+        >
+          Login
+        </Button>
       </CardFooter>
 
       {/* Delete Confirmation Dialog */}
@@ -217,13 +239,23 @@ export function UserCard({
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel disabled={isDeleting}>Cancel</AlertDialogCancel>
-            <AlertDialogAction
-              onClick={handleDeleteUser}
-              disabled={isDeleting}
-              className='bg-red-600 hover:bg-red-700'
-            >
-              {isDeleting ? 'Deactivating...' : 'Deactivate'}
-            </AlertDialogAction>
+            {isProtectedUser ? (
+              <AlertDialogAction
+                onClick={handleDeleteUser}
+                disabled={isDeleting}
+                className='bg-red-600 hover:bg-red-700'
+              >
+                {isDeleting ? 'Deactivating...' : 'Deactivate'}
+              </AlertDialogAction>
+            ) : (
+              <AlertDialogAction
+                onClick={handleDeleteUser}
+                disabled={isDeleting}
+                className='bg-red-600 hover:bg-red-700'
+              >
+                {isDeleting ? 'Deactivating...' : 'Deactivate'}
+              </AlertDialogAction>
+            )}
           </AlertDialogFooter>
         </AlertDialogContent>
       </AlertDialog>
