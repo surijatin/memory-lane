@@ -46,6 +46,8 @@ You can view a video demonstration of Memory Lane in action by clicking the link
 
 [![Memory Lane Video](./screenshots/thumbnail.png)](./screenshots/recording.mov)
 
+[Click here for the demo](https://drive.google.com/file/d/1OPhkVGjCMEvFXOxcIkmpRs_XwmO6W_B0/view?usp=sharing)
+
 _The video provides a comprehensive overview of the application's features and user experience._
 
 ## Technical Implementation
