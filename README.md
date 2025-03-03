@@ -29,6 +29,25 @@ Memory Lane solves the problem of scattered memories across different platforms 
 - **Dark Mode Support**: Adaptable UI for both light and dark preferences
 - **Drag & Drop**: Intuitive image upload experience
 
+### Screenshots
+
+![Home Page](./screenshots/homepage.png)
+_The landing page provides a clear introduction to Memory Lane._
+
+![Memory Lanes](./screenshots/memory_lanes.png)
+_The Memory Lanes tab lists all the uploaded Memory Lanes of the user._
+
+![Memory Lane Detail](./screenshots/memory_lane_details.png)
+_A detailed view of a memory lane with its timeline of events._
+
+### Video Demonstration
+
+You can view a video demonstration of Memory Lane in action by clicking the link/image below:
+
+[![Memory Lane Video](./screenshots/thumbnail.png)](./screenshots/recording.mov)
+
+_The video provides a comprehensive overview of the application's features and user experience._
+
 ## Technical Implementation
 
 ### Architecture
@@ -83,35 +102,6 @@ The application interacts with:
   - Adaptive navigation
     > **Warning**: Mobile UI Layout not supported yet
 
-## Setup and Installation
-
-1. **Clone the repository**
-
-   ```bash
-   git clone [your-repo-url]
-   cd memory-lane
-   ```
-
-2. **Install dependencies**
-
-   ```bash
-   npm install
-   ```
-
-3. **Environment setup**
-   Create a `.env` file with your Supabase credentials:
-
-   ```
-   VITE_SUPABASE_URL=your_supabase_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   ```
-
-4. **Run the development server**
-
-   ```bash
-   npm run dev
-   ```
-
 ## Tech Stack
 
 - **Frontend**:
@@ -163,17 +153,6 @@ The application features a clean, intuitive design with a focus on showcasing me
 - **Detail View**: Expanded view for individual events with full details
 - **Sharing Interface**: Clean public view for shared memory lanes
 
-### Screenshots
-
-![Home Page](./screenshots/homepage.png)
-_The landing page provides a clear introduction to Memory Lane._
-
-![Memory Lanes](./screenshots/memory_lanes.png)
-_The Memory Lanes tab lists all the uploaded Memory Lanes of the user._
-
-![Memory Lane Detail](./screenshots/memory_lane_details.png)
-_A detailed view of a memory lane with its timeline of events._
-
 ## Development Approach
 
 This implementation followed a user-centered design approach:
@@ -183,6 +162,35 @@ This implementation followed a user-centered design approach:
 3. **Iterative Testing**: Ensuring quality through continuous testing
 4. **Performance Optimization**: Ensuring smooth experience even with many images
 5. **Accessibility Considerations**: Making the app usable for all - Mobile UI design yet to be b supported!
+
+## Setup and Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone [your-repo-url]
+   cd memory-lane
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Environment setup**
+   Create a `.env` file with your Supabase credentials:
+
+   ```
+   VITE_SUPABASE_URL=your_supabase_url
+   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+   ```
+
+4. **Run the development server**
+
+   ```bash
+   npm run dev
+   ```
 
 ## Conclusion
 
