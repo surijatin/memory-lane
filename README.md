@@ -48,7 +48,12 @@ You can view a video demonstration of Memory Lane in action by clicking the link
 
 [Click here for the demo](https://drive.google.com/file/d/1OPhkVGjCMEvFXOxcIkmpRs_XwmO6W_B0/view?usp=sharing)
 
-_The video provides a comprehensive overview of the application's features and user experience._
+_The video provides a comprehensive overview of the features and user experience._
+
+### Backend Screenshot
+
+![Supabase Backend](./screenshots/supabase.png)
+_Screen capture showing a backend Table in the Supabase namely memory_lanes._
 
 ## Technical Implementation
 
