@@ -1,22 +1,19 @@
-import { CubeIcon } from '@heroicons/react/20/solid'
-import './App.css'
+import { Toaster } from 'sonner'
+import { AuthProvider } from './contexts/AuthContext'
+import { AppRoutes } from './routes'
+import { ErrorBoundary } from './components/common/ErrorBoundary'
+// import { ThemeToggle } from './components/ThemeToggle'
 
 function App() {
   return (
-    <div>
-      <div className='mx-auto max-w-7xl sm:px-6 lg:px-8 mt-32'>
-        <div className='overflow-hidden rounded-lg bg-white shadow h-96'>
-          <div className='px-4 py-5 sm:p-6'>
-            <div className='flex items-center'>
-              <CubeIcon className='h-16 w-16 inline-block' />
-              <h1 className='text-4xl font-semibold text-gray-900 mb-4 ml-4 mt-4'>
-                Memory lane
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ErrorBoundary>
+      <AuthProvider>
+        <AppRoutes />
+
+        {/* Toaster for notifications */}
+        <Toaster position='top-right' richColors closeButton />
+      </AuthProvider>
+    </ErrorBoundary>
   )
 }
 
